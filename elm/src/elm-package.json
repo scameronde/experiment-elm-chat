@@ -1,0 +1,24 @@
+{
+    "version": "1.0.0",
+    "summary": "A simple chat client",
+    "repository": "https://github.com/scameronde/experiment-elm-chat.git",
+    "license": "BSD3",
+    "source-directories": [
+        ".",
+        "../../../elm-model/src",
+        "../../../elm-cmd/src",
+        "../../../elm-lens/src"
+    ],
+    "exposed-modules": [],
+    "dependencies": {
+        "elm-lang/core": "5.0.0 <= v < 6.0.0",
+        "elm-lang/html": "2.0.0 <= v < 3.0.0",
+        "elm-lang/http": "1.0.0 <= v < 2.0.0",
+        "elm-lang/websocket": "1.0.2 <= v < 2.0.0",
+        "NoRedInk/elm-decode-pipeline": "3.0.0 <= v < 4.0.0",
+        "krisajenkins/elm-dialog": "4.0.0 <= v < 5.0.0",
+        "elm-community/elm-test": "3.1.0 <= v < 4.0.0",
+        "rogeriochaves/elm-test-bdd-style": "6.0.1 <= v < 7.0.0"
+    },
+    "elm-version": "0.18.0 <= v < 0.19.0"
+}
