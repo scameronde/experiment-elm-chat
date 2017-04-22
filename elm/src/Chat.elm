@@ -3,6 +3,7 @@ module Chat exposing (Msg, Model, init, update, view, subscriptions)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Model
+import Lens exposing (..)
 import BusinessTypes exposing (..)
 import ChatRooms
 import ChatRoom
@@ -39,21 +40,21 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         ChatRoomsMsg (ChatRooms.Selected chatRoom) ->
-            Model.map (\a -> { model | chatRoomModel = Just a }) ChatRoomMsg (ChatRoom.init model.participant chatRoom)
+            Model.map (Just >> fset øchatRoomModel model) ChatRoomMsg (ChatRoom.init model.participant chatRoom)
 
         ChatRoomsMsg (ChatRooms.Deselected) ->
-            ( { model | chatRoomModel = Nothing }, Cmd.none )
+            fset øchatRoomModel model Nothing ! []
 
         ChatRoomsMsg msg_ ->
-            Model.map (\a -> { model | chatRoomsModel = a }) ChatRoomsMsg (ChatRooms.update msg_ model.chatRoomsModel)
+            Model.map (fset øchatRoomsModel model) ChatRoomsMsg (ChatRooms.update msg_ model.chatRoomsModel)
 
         ChatRoomMsg msg_ ->
             case model.chatRoomModel of
                 Just model_ ->
-                    Model.map (\a -> { model | chatRoomModel = Just a }) ChatRoomMsg (ChatRoom.update msg_ model_)
+                    Model.map (Just >> fset øchatRoomModel model) ChatRoomMsg (ChatRoom.update msg_ model_)
 
-                _ ->
-                    ( model, Cmd.none )
+                Nothing ->
+                    model ! []
 
 
 view : Model -> Html Msg
@@ -84,3 +85,18 @@ subscriptions model =
             _ ->
                 Sub.none
         ]
+
+
+øparticipant : Lens { b | participant : a } a
+øparticipant =
+    lens .participant (\a b -> { b | participant = a })
+
+
+øchatRoomModel : Lens { b | chatRoomModel : a } a
+øchatRoomModel =
+    lens .chatRoomModel (\a b -> { b | chatRoomModel = a })
+
+
+øchatRoomsModel : Lens { b | chatRoomsModel : a } a
+øchatRoomsModel =
+    lens .chatRoomsModel (\a b -> { b | chatRoomsModel = a })

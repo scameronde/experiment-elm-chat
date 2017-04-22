@@ -10209,6 +10209,18 @@ var _krisajenkins$elm_dialog$Dialog$Config = F5(
 		return {closeMessage: a, containerClass: b, header: c, body: d, footer: e};
 	});
 
+var _scameronde$experiment_elm_chat$Lens$get = F2(
+	function (lens, rec) {
+		return lens.get(rec);
+	});
+var _scameronde$experiment_elm_chat$Lens$fset = F3(
+	function (lens, rec, elem) {
+		return A2(lens.fset, rec, elem);
+	});
+var _scameronde$experiment_elm_chat$Lens$set = F3(
+	function (lens, elem, rec) {
+		return A2(lens.set, elem, rec);
+	});
 var _scameronde$experiment_elm_chat$Lens$Lens = F3(
 	function (a, b, c) {
 		return {get: a, set: b, fset: c};
@@ -10245,7 +10257,7 @@ var _scameronde$experiment_elm_chat$Lens$compose = F2(
 		return A2(_scameronde$experiment_elm_chat$Lens_ops['.'], x, y);
 	});
 
-var _scameronde$experiment_elm_chat$BusinessTypes$errorLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øerror = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.error;
@@ -10256,7 +10268,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$errorLens = A2(
 				b,
 				{error: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$messageLogLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$ømessageLog = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.messageLog;
@@ -10267,7 +10279,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$messageLogLens = A2(
 				b,
 				{messageLog: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$messageLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$ømessage = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.message;
@@ -10278,7 +10290,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$messageLens = A2(
 				b,
 				{message: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$chatRoomLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øchatRoom = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.chatRoom;
@@ -10289,7 +10301,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$chatRoomLens = A2(
 				b,
 				{chatRoom: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$participantLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øparticipant = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.participant;
@@ -10300,7 +10312,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$participantLens = A2(
 				b,
 				{participant: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$titleLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øtitle = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.title;
@@ -10311,7 +10323,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$titleLens = A2(
 				b,
 				{title: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$nameLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øname = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.name;
@@ -10322,7 +10334,7 @@ var _scameronde$experiment_elm_chat$BusinessTypes$nameLens = A2(
 				b,
 				{name: a});
 		}));
-var _scameronde$experiment_elm_chat$BusinessTypes$idLens = A2(
+var _scameronde$experiment_elm_chat$BusinessTypes$øid = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.id;
@@ -10702,7 +10714,7 @@ var _scameronde$experiment_elm_chat$Cmd$toCmd = function (message) {
 		_elm_lang$core$Task$succeed(message));
 };
 
-var _scameronde$experiment_elm_chat$ChatRooms$newChatRoomTitleLens = A2(
+var _scameronde$experiment_elm_chat$ChatRooms$ønewChatRoomTitle = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.newChatRoomTitle;
@@ -10713,7 +10725,7 @@ var _scameronde$experiment_elm_chat$ChatRooms$newChatRoomTitleLens = A2(
 				b,
 				{newChatRoomTitle: a});
 		}));
-var _scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens = A2(
+var _scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.chatRoomIdToDelete;
@@ -10724,7 +10736,7 @@ var _scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens = A2(
 				b,
 				{chatRoomIdToDelete: a});
 		}));
-var _scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens = A2(
+var _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.selectedChatRoomId;
@@ -10735,7 +10747,7 @@ var _scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens = A2(
 				b,
 				{selectedChatRoomId: a});
 		}));
-var _scameronde$experiment_elm_chat$ChatRooms$chatRoomsLens = A2(
+var _scameronde$experiment_elm_chat$ChatRooms$øchatRooms = A2(
 	_scameronde$experiment_elm_chat$Lens$lens,
 	function (_) {
 		return _.chatRooms;
@@ -10780,11 +10792,14 @@ var _scameronde$experiment_elm_chat$ChatRooms$NotAsked = {ctor: 'NotAsked'};
 var _scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult = function (a) {
 	return {ctor: 'GetChatRoomsResult', _0: a};
 };
-var _scameronde$experiment_elm_chat$ChatRooms$init = {
-	ctor: '_Tuple2',
-	_0: {chatRooms: _scameronde$experiment_elm_chat$ChatRooms$NotAsked, selectedChatRoomId: _elm_lang$core$Maybe$Nothing, chatRoomIdToDelete: _elm_lang$core$Maybe$Nothing, newChatRoomTitle: '', error: ''},
-	_1: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult)
-};
+var _scameronde$experiment_elm_chat$ChatRooms$init = A2(
+	_elm_lang$core$Platform_Cmd_ops['!'],
+	{chatRooms: _scameronde$experiment_elm_chat$ChatRooms$NotAsked, selectedChatRoomId: _elm_lang$core$Maybe$Nothing, chatRoomIdToDelete: _elm_lang$core$Maybe$Nothing, newChatRoomTitle: '', error: ''},
+	{
+		ctor: '::',
+		_0: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult),
+		_1: {ctor: '[]'}
+	});
 var _scameronde$experiment_elm_chat$ChatRooms$GetChatRooms = function (a) {
 	return {ctor: 'GetChatRooms', _0: a};
 };
@@ -11048,8 +11063,9 @@ var _scameronde$experiment_elm_chat$ChatRooms$viewChatRooms = function (model) {
 var _scameronde$experiment_elm_chat$ChatRooms$Deselected = {ctor: 'Deselected'};
 var _scameronde$experiment_elm_chat$ChatRooms$updateChatRoomList = F2(
 	function (chatRooms, model) {
-		var newModel = A2(
-			_scameronde$experiment_elm_chat$ChatRooms$chatRoomsLens.set,
+		var newModel = A3(
+			_scameronde$experiment_elm_chat$Lens$set,
+			_scameronde$experiment_elm_chat$ChatRooms$øchatRooms,
 			_scameronde$experiment_elm_chat$ChatRooms$Success(
 				A2(
 					_elm_lang$core$List$sortBy,
@@ -11060,53 +11076,69 @@ var _scameronde$experiment_elm_chat$ChatRooms$updateChatRoomList = F2(
 			model);
 		var _p2 = model.selectedChatRoomId;
 		if (_p2.ctor === 'Nothing') {
-			return {ctor: '_Tuple2', _0: newModel, _1: _elm_lang$core$Platform_Cmd$none};
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				newModel,
+				{ctor: '[]'});
 		} else {
 			var _p3 = A2(_scameronde$experiment_elm_chat$ChatRooms$findChatRoom, _p2._0, chatRooms);
 			if (_p3.ctor === 'Nothing') {
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set, _elm_lang$core$Maybe$Nothing, newModel),
-					_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId, _elm_lang$core$Maybe$Nothing, newModel),
+					{
+						ctor: '::',
+						_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+						_1: {ctor: '[]'}
+					});
 			} else {
-				return {ctor: '_Tuple2', _0: newModel, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					newModel,
+					{ctor: '[]'});
 			}
 		}
 	});
 var _scameronde$experiment_elm_chat$ChatRooms$deleteChatRoom = function (model) {
-	var newModel = A2(_scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens.set, _elm_lang$core$Maybe$Nothing, model);
+	var newModel = A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete, _elm_lang$core$Maybe$Nothing, model);
 	var _p4 = {ctor: '_Tuple2', _0: model.chatRoomIdToDelete, _1: model.selectedChatRoomId};
 	if (_p4._0.ctor === 'Just') {
 		if (_p4._1.ctor === 'Just') {
 			var _p5 = _p4._0._0;
-			return _elm_lang$core$Native_Utils.eq(_p5, _p4._1._0) ? {
-				ctor: '_Tuple2',
-				_0: A2(_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set, _elm_lang$core$Maybe$Nothing, newModel),
-				_1: _elm_lang$core$Platform_Cmd$batch(
-					{
+			return _elm_lang$core$Native_Utils.eq(_p5, _p4._1._0) ? A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId, _elm_lang$core$Maybe$Nothing, newModel),
+				{
+					ctor: '::',
+					_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+					_1: {
 						ctor: '::',
-						_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
-						_1: {
-							ctor: '::',
-							_0: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p5, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult),
-							_1: {ctor: '[]'}
-						}
-					})
-			} : {
-				ctor: '_Tuple2',
-				_0: newModel,
-				_1: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p5, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult)
-			};
+						_0: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p5, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult),
+						_1: {ctor: '[]'}
+					}
+				}) : A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				newModel,
+				{
+					ctor: '::',
+					_0: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p5, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult),
+					_1: {ctor: '[]'}
+				});
 		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: newModel,
-				_1: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p4._0._0, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult)
-			};
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				newModel,
+				{
+					ctor: '::',
+					_0: A2(_scameronde$experiment_elm_chat$RestClient$deleteChatRoom, _p4._0._0, _scameronde$experiment_elm_chat$ChatRooms$DeleteChatRoomResult),
+					_1: {ctor: '[]'}
+				});
 		}
 	} else {
-		return {ctor: '_Tuple2', _0: newModel, _1: _elm_lang$core$Platform_Cmd$none};
+		return A2(
+			_elm_lang$core$Platform_Cmd_ops['!'],
+			newModel,
+			{ctor: '[]'});
 	}
 };
 var _scameronde$experiment_elm_chat$ChatRooms$Selected = function (a) {
@@ -11116,21 +11148,28 @@ var _scameronde$experiment_elm_chat$ChatRooms$selectFromAvailableChatRoom = F3(
 	function (id, chatRooms, model) {
 		var _p6 = A2(_scameronde$experiment_elm_chat$ChatRooms$findChatRoom, id, chatRooms);
 		if (_p6.ctor === 'Nothing') {
-			return {
-				ctor: '_Tuple2',
-				_0: A2(_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set, _elm_lang$core$Maybe$Nothing, model),
-				_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-			};
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId, _elm_lang$core$Maybe$Nothing, model),
+				{
+					ctor: '::',
+					_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+					_1: {ctor: '[]'}
+				});
 		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: A2(
-					_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set,
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				A3(
+					_scameronde$experiment_elm_chat$Lens$set,
+					_scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId,
 					_elm_lang$core$Maybe$Just(id),
 					model),
-				_1: _scameronde$experiment_elm_chat$Cmd$toCmd(
-					_scameronde$experiment_elm_chat$ChatRooms$Selected(_p6._0))
-			};
+				{
+					ctor: '::',
+					_0: _scameronde$experiment_elm_chat$Cmd$toCmd(
+						_scameronde$experiment_elm_chat$ChatRooms$Selected(_p6._0)),
+					_1: {ctor: '[]'}
+				});
 		}
 	});
 var _scameronde$experiment_elm_chat$ChatRooms$selectChatRoom = F2(
@@ -11138,11 +11177,14 @@ var _scameronde$experiment_elm_chat$ChatRooms$selectChatRoom = F2(
 		if (_elm_lang$core$Native_Utils.eq(
 			model.selectedChatRoomId,
 			_elm_lang$core$Maybe$Just(id))) {
-			return {
-				ctor: '_Tuple2',
-				_0: A2(_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set, _elm_lang$core$Maybe$Nothing, model),
-				_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-			};
+			return A2(
+				_elm_lang$core$Platform_Cmd_ops['!'],
+				A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId, _elm_lang$core$Maybe$Nothing, model),
+				{
+					ctor: '::',
+					_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+					_1: {ctor: '[]'}
+				});
 		} else {
 			var _p7 = model.chatRooms;
 			switch (_p7.ctor) {
@@ -11151,11 +11193,14 @@ var _scameronde$experiment_elm_chat$ChatRooms$selectChatRoom = F2(
 				case 'Success':
 					return A3(_scameronde$experiment_elm_chat$ChatRooms$selectFromAvailableChatRoom, id, _p7._0, model);
 				default:
-					return {
-						ctor: '_Tuple2',
-						_0: A2(_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set, _elm_lang$core$Maybe$Nothing, model),
-						_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-					};
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId, _elm_lang$core$Maybe$Nothing, model),
+						{
+							ctor: '::',
+							_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+							_1: {ctor: '[]'}
+						});
 			}
 		}
 	});
@@ -11166,52 +11211,64 @@ var _scameronde$experiment_elm_chat$ChatRooms$update = F2(
 			case 'SelectChatRoom':
 				return A2(_scameronde$experiment_elm_chat$ChatRooms$selectChatRoom, _p8._0, model);
 			case 'ChangeField':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$ChatRooms$newChatRoomTitleLens.set, _p8._1, model),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$ønewChatRoomTitle, _p8._1, model),
+					{ctor: '[]'});
 			case 'PostChatRoom':
 				var _p9 = _p8._0;
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$ChatRooms$newChatRoomTitleLens.set, '', _p9),
-					_1: A2(
-						_scameronde$experiment_elm_chat$RestClient$postChatRoom,
-						A2(
-							_scameronde$experiment_elm_chat$BusinessTypes$ChatRoom,
-							_scameronde$experiment_elm_chat$BusinessTypes$Id(''),
-							_p9.newChatRoomTitle),
-						_scameronde$experiment_elm_chat$ChatRooms$PostChatRoomResult)
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$ønewChatRoomTitle, '', _p9),
+					{
+						ctor: '::',
+						_0: A2(
+							_scameronde$experiment_elm_chat$RestClient$postChatRoom,
+							A2(
+								_scameronde$experiment_elm_chat$BusinessTypes$ChatRoom,
+								_scameronde$experiment_elm_chat$BusinessTypes$Id(''),
+								_p9.newChatRoomTitle),
+							_scameronde$experiment_elm_chat$ChatRooms$PostChatRoomResult),
+						_1: {ctor: '[]'}
+					});
 			case 'PostChatRoomResult':
 				if (_p8._0.ctor === 'Ok') {
-					return {
-						ctor: '_Tuple2',
-						_0: A2(_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set, '', model),
-						_1: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult)
-					};
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$BusinessTypes$øerror, '', model),
+						{
+							ctor: '::',
+							_0: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult),
+							_1: {ctor: '[]'}
+						});
 				} else {
-					return {
-						ctor: '_Tuple2',
-						_0: A2(
-							_scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens.set,
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(
+							_scameronde$experiment_elm_chat$Lens$set,
+							_scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete,
 							_elm_lang$core$Maybe$Nothing,
-							A2(
-								_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set,
+							A3(
+								_scameronde$experiment_elm_chat$Lens$set,
+								_scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId,
 								_elm_lang$core$Maybe$Nothing,
-								A2(
-									_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set,
+								A3(
+									_scameronde$experiment_elm_chat$Lens$set,
+									_scameronde$experiment_elm_chat$BusinessTypes$øerror,
 									_elm_lang$core$Basics$toString(_p8._0._0),
 									model))),
-						_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-					};
+						{
+							ctor: '::',
+							_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+							_1: {ctor: '[]'}
+						});
 				}
 			case 'GetChatRooms':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(
-						_scameronde$experiment_elm_chat$ChatRooms$chatRoomsLens.set,
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(
+						_scameronde$experiment_elm_chat$Lens$set,
+						_scameronde$experiment_elm_chat$ChatRooms$øchatRooms,
 						function () {
 							var _p10 = model.chatRooms;
 							switch (_p10.ctor) {
@@ -11224,55 +11281,73 @@ var _scameronde$experiment_elm_chat$ChatRooms$update = F2(
 							}
 						}(),
 						model),
-					_1: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult)
-				};
+					{
+						ctor: '::',
+						_0: _scameronde$experiment_elm_chat$RestClient$getChatRooms(_scameronde$experiment_elm_chat$ChatRooms$GetChatRoomsResult),
+						_1: {ctor: '[]'}
+					});
 			case 'GetChatRoomsResult':
 				if (_p8._0.ctor === 'Ok') {
 					return A2(_scameronde$experiment_elm_chat$ChatRooms$updateChatRoomList, _p8._0._0, model);
 				} else {
 					var _p11 = _p8._0._0;
-					return {
-						ctor: '_Tuple2',
-						_0: A2(
-							_scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens.set,
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(
+							_scameronde$experiment_elm_chat$Lens$set,
+							_scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete,
 							_elm_lang$core$Maybe$Nothing,
-							A2(
-								_scameronde$experiment_elm_chat$ChatRooms$selectedChatRoomIdLens.set,
+							A3(
+								_scameronde$experiment_elm_chat$Lens$set,
+								_scameronde$experiment_elm_chat$ChatRooms$øselectedChatRoomId,
 								_elm_lang$core$Maybe$Nothing,
-								A2(
-									_scameronde$experiment_elm_chat$ChatRooms$chatRoomsLens.set,
+								A3(
+									_scameronde$experiment_elm_chat$Lens$set,
+									_scameronde$experiment_elm_chat$ChatRooms$øchatRooms,
 									_scameronde$experiment_elm_chat$ChatRooms$Failure(
 										_elm_lang$core$Basics$toString(_p11)),
-									A2(
-										_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set,
+									A3(
+										_scameronde$experiment_elm_chat$Lens$set,
+										_scameronde$experiment_elm_chat$BusinessTypes$øerror,
 										_elm_lang$core$Basics$toString(_p11),
 										model)))),
-						_1: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected)
-					};
+						{
+							ctor: '::',
+							_0: _scameronde$experiment_elm_chat$Cmd$toCmd(_scameronde$experiment_elm_chat$ChatRooms$Deselected),
+							_1: {ctor: '[]'}
+						});
 				}
 			case 'DeleteChatRoom':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(
-						_scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens.set,
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(
+						_scameronde$experiment_elm_chat$Lens$set,
+						_scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete,
 						_elm_lang$core$Maybe$Just(_p8._0),
 						model),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+					{ctor: '[]'});
 			case 'DeleteChatRoomAcknowledge':
 				return _scameronde$experiment_elm_chat$ChatRooms$deleteChatRoom(model);
 			case 'DeleteChatRoomCancel':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$ChatRooms$chatRoomIdToDeleteLens.set, _elm_lang$core$Maybe$Nothing, model),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$ChatRooms$øchatRoomIdToDelete, _elm_lang$core$Maybe$Nothing, model),
+					{ctor: '[]'});
 			case 'DeleteChatRoomResult':
-				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'});
 			case 'Selected':
-				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'});
 			default:
-				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'});
 		}
 	});
 var _scameronde$experiment_elm_chat$ChatRooms$Title = {ctor: 'Title'};
@@ -11417,43 +11492,44 @@ var _scameronde$experiment_elm_chat$ChatRoom$update = F2(
 		var _p0 = msg;
 		switch (_p0.ctor) {
 			case 'ChangeField':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$BusinessTypes$messageLens.set, _p0._1, model),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$BusinessTypes$ømessage, _p0._1, model),
+					{ctor: '[]'});
 			case 'SendMessage':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(_scameronde$experiment_elm_chat$BusinessTypes$messageLens.set, '', model),
-					_1: _scameronde$experiment_elm_chat$WebSocketClient$sendMessage(
-						_scameronde$experiment_elm_chat$BusinessTypes$Message(_p0._0))
-				};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$BusinessTypes$ømessage, '', model),
+					{
+						ctor: '::',
+						_0: _scameronde$experiment_elm_chat$WebSocketClient$sendMessage(
+							_scameronde$experiment_elm_chat$BusinessTypes$Message(_p0._0)),
+						_1: {ctor: '[]'}
+					});
 			case 'ReceivedMessage':
-				return {
-					ctor: '_Tuple2',
-					_0: A2(
-						_scameronde$experiment_elm_chat$BusinessTypes$messageLogLens.set,
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(
+						_scameronde$experiment_elm_chat$Lens$set,
+						_scameronde$experiment_elm_chat$BusinessTypes$ømessageLog,
 						A2(_elm_lang$core$Basics_ops['++'], model.messageLog, _p0._0),
 						model),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+					{ctor: '[]'});
 			default:
 				if (_p0._0.ctor === 'Ok') {
-					return {
-						ctor: '_Tuple2',
-						_0: A2(_scameronde$experiment_elm_chat$BusinessTypes$messageLogLens.set, _p0._0._0.messageLog, model),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$BusinessTypes$ømessageLog, _p0._0._0.messageLog, model),
+						{ctor: '[]'});
 				} else {
-					return {
-						ctor: '_Tuple2',
-						_0: A2(
-							_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set,
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(
+							_scameronde$experiment_elm_chat$Lens$set,
+							_scameronde$experiment_elm_chat$BusinessTypes$øerror,
 							_elm_lang$core$Basics$toString(_p0._0._0),
 							model),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
+						{ctor: '[]'});
 				}
 		}
 	});
@@ -11608,6 +11684,39 @@ var _scameronde$experiment_elm_chat$ChatRoom$view = function (model) {
 		});
 };
 
+var _scameronde$experiment_elm_chat$Chat$øchatRoomsModel = A2(
+	_scameronde$experiment_elm_chat$Lens$lens,
+	function (_) {
+		return _.chatRoomsModel;
+	},
+	F2(
+		function (a, b) {
+			return _elm_lang$core$Native_Utils.update(
+				b,
+				{chatRoomsModel: a});
+		}));
+var _scameronde$experiment_elm_chat$Chat$øchatRoomModel = A2(
+	_scameronde$experiment_elm_chat$Lens$lens,
+	function (_) {
+		return _.chatRoomModel;
+	},
+	F2(
+		function (a, b) {
+			return _elm_lang$core$Native_Utils.update(
+				b,
+				{chatRoomModel: a});
+		}));
+var _scameronde$experiment_elm_chat$Chat$øparticipant = A2(
+	_scameronde$experiment_elm_chat$Lens$lens,
+	function (_) {
+		return _.participant;
+	},
+	F2(
+		function (a, b) {
+			return _elm_lang$core$Native_Utils.update(
+				b,
+				{participant: a});
+		}));
 var _scameronde$experiment_elm_chat$Chat$Model = F3(
 	function (a, b, c) {
 		return {participant: a, chatRoomModel: b, chatRoomsModel: c};
@@ -11640,50 +11749,46 @@ var _scameronde$experiment_elm_chat$Chat$update = F2(
 				case 'Selected':
 					return A3(
 						_scameronde$experiment_elm_chat$Model$map,
-						function (a) {
-							return _elm_lang$core$Native_Utils.update(
+						function (_p1) {
+							return A3(
+								_scameronde$experiment_elm_chat$Lens$fset,
+								_scameronde$experiment_elm_chat$Chat$øchatRoomModel,
 								model,
-								{
-									chatRoomModel: _elm_lang$core$Maybe$Just(a)
-								});
+								_elm_lang$core$Maybe$Just(_p1));
 						},
 						_scameronde$experiment_elm_chat$Chat$ChatRoomMsg,
 						A2(_scameronde$experiment_elm_chat$ChatRoom$init, model.participant, _p0._0._0));
 				case 'Deselected':
-					return {
-						ctor: '_Tuple2',
-						_0: _elm_lang$core$Native_Utils.update(
-							model,
-							{chatRoomModel: _elm_lang$core$Maybe$Nothing}),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(_scameronde$experiment_elm_chat$Lens$fset, _scameronde$experiment_elm_chat$Chat$øchatRoomModel, model, _elm_lang$core$Maybe$Nothing),
+						{ctor: '[]'});
 				default:
 					return A3(
 						_scameronde$experiment_elm_chat$Model$map,
-						function (a) {
-							return _elm_lang$core$Native_Utils.update(
-								model,
-								{chatRoomsModel: a});
-						},
+						A2(_scameronde$experiment_elm_chat$Lens$fset, _scameronde$experiment_elm_chat$Chat$øchatRoomsModel, model),
 						_scameronde$experiment_elm_chat$Chat$ChatRoomsMsg,
 						A2(_scameronde$experiment_elm_chat$ChatRooms$update, _p0._0, model.chatRoomsModel));
 			}
 		} else {
-			var _p1 = model.chatRoomModel;
-			if (_p1.ctor === 'Just') {
+			var _p2 = model.chatRoomModel;
+			if (_p2.ctor === 'Just') {
 				return A3(
 					_scameronde$experiment_elm_chat$Model$map,
-					function (a) {
-						return _elm_lang$core$Native_Utils.update(
+					function (_p3) {
+						return A3(
+							_scameronde$experiment_elm_chat$Lens$fset,
+							_scameronde$experiment_elm_chat$Chat$øchatRoomModel,
 							model,
-							{
-								chatRoomModel: _elm_lang$core$Maybe$Just(a)
-							});
+							_elm_lang$core$Maybe$Just(_p3));
 					},
 					_scameronde$experiment_elm_chat$Chat$ChatRoomMsg,
-					A2(_scameronde$experiment_elm_chat$ChatRoom$update, _p0._0, _p1._0));
+					A2(_scameronde$experiment_elm_chat$ChatRoom$update, _p0._0, _p2._0));
 			} else {
-				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'});
 			}
 		}
 	});
@@ -11724,12 +11829,12 @@ var _scameronde$experiment_elm_chat$Chat$view = function (model) {
 					{
 						ctor: '::',
 						_0: function () {
-							var _p2 = model.chatRoomModel;
-							if (_p2.ctor === 'Just') {
+							var _p4 = model.chatRoomModel;
+							if (_p4.ctor === 'Just') {
 								return A2(
 									_elm_lang$html$Html$map,
 									_scameronde$experiment_elm_chat$Chat$ChatRoomMsg,
-									_scameronde$experiment_elm_chat$ChatRoom$view(_p2._0));
+									_scameronde$experiment_elm_chat$ChatRoom$view(_p4._0));
 							} else {
 								return A2(
 									_elm_lang$html$Html$div,
@@ -11754,12 +11859,12 @@ var _scameronde$experiment_elm_chat$Chat$subscriptions = function (model) {
 			_1: {
 				ctor: '::',
 				_0: function () {
-					var _p3 = model.chatRoomModel;
-					if (_p3.ctor === 'Just') {
+					var _p5 = model.chatRoomModel;
+					if (_p5.ctor === 'Just') {
 						return A2(
 							_elm_lang$core$Platform_Sub$map,
 							_scameronde$experiment_elm_chat$Chat$ChatRoomMsg,
-							_scameronde$experiment_elm_chat$ChatRoom$subscriptions(_p3._0));
+							_scameronde$experiment_elm_chat$ChatRoom$subscriptions(_p5._0));
 					} else {
 						return _elm_lang$core$Platform_Sub$none;
 					}
@@ -11971,14 +12076,13 @@ var _scameronde$experiment_elm_chat$Login$updatedErrorMessage = F2(
 	function (name, error) {
 		return _elm_lang$core$String$isEmpty(name) ? '' : error;
 	});
-var _scameronde$experiment_elm_chat$Login$init = {
-	ctor: '_Tuple2',
-	_0: {name: '', error: '', json: ''},
-	_1: _elm_lang$core$Platform_Cmd$none
-};
-var _scameronde$experiment_elm_chat$Login$Model = F3(
-	function (a, b, c) {
-		return {name: a, error: b, json: c};
+var _scameronde$experiment_elm_chat$Login$init = A2(
+	_elm_lang$core$Platform_Cmd_ops['!'],
+	{name: '', error: ''},
+	{ctor: '[]'});
+var _scameronde$experiment_elm_chat$Login$Model = F2(
+	function (a, b) {
+		return {name: a, error: b};
 	});
 var _scameronde$experiment_elm_chat$Login$ChangeField = F2(
 	function (a, b) {
@@ -11997,40 +12101,52 @@ var _scameronde$experiment_elm_chat$Login$update = F2(
 		switch (_p0.ctor) {
 			case 'ChangeField':
 				var _p1 = _p0._1;
-				return {
-					ctor: '_Tuple2',
-					_0: A2(
-						_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set,
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					A3(
+						_scameronde$experiment_elm_chat$Lens$set,
+						_scameronde$experiment_elm_chat$BusinessTypes$øerror,
 						A2(_scameronde$experiment_elm_chat$Login$updatedErrorMessage, _p1, model.error),
-						A2(_scameronde$experiment_elm_chat$BusinessTypes$nameLens.set, _p1, model)),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
+						A3(_scameronde$experiment_elm_chat$Lens$set, _scameronde$experiment_elm_chat$BusinessTypes$øname, _p1, model)),
+					{ctor: '[]'});
 			case 'GetParticipant':
-				return _elm_lang$core$String$isEmpty(model.name) ? {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none} : {
-					ctor: '_Tuple2',
-					_0: model,
-					_1: A2(_scameronde$experiment_elm_chat$RestClient$getParticipant, model.name, _scameronde$experiment_elm_chat$Login$GetParticipantResult)
-				};
+				return _elm_lang$core$String$isEmpty(model.name) ? A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'}) : A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{
+						ctor: '::',
+						_0: A2(_scameronde$experiment_elm_chat$RestClient$getParticipant, model.name, _scameronde$experiment_elm_chat$Login$GetParticipantResult),
+						_1: {ctor: '[]'}
+					});
 			case 'GetParticipantResult':
 				if (_p0._0.ctor === 'Ok') {
-					return {
-						ctor: '_Tuple2',
-						_0: model,
-						_1: _scameronde$experiment_elm_chat$Cmd$toCmd(
-							_scameronde$experiment_elm_chat$Login$Login(_p0._0._0))
-					};
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						model,
+						{
+							ctor: '::',
+							_0: _scameronde$experiment_elm_chat$Cmd$toCmd(
+								_scameronde$experiment_elm_chat$Login$Login(_p0._0._0)),
+							_1: {ctor: '[]'}
+						});
 				} else {
-					return {
-						ctor: '_Tuple2',
-						_0: A2(
-							_scameronde$experiment_elm_chat$BusinessTypes$errorLens.set,
+					return A2(
+						_elm_lang$core$Platform_Cmd_ops['!'],
+						A3(
+							_scameronde$experiment_elm_chat$Lens$set,
+							_scameronde$experiment_elm_chat$BusinessTypes$øerror,
 							_elm_lang$core$Basics$toString(_p0._0._0),
 							model),
-						_1: _elm_lang$core$Platform_Cmd$none
-					};
+						{ctor: '[]'});
 				}
 			default:
-				return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				return A2(
+					_elm_lang$core$Platform_Cmd_ops['!'],
+					model,
+					{ctor: '[]'});
 		}
 	});
 var _scameronde$experiment_elm_chat$Login$Name = {ctor: 'Name'};
@@ -12244,6 +12360,17 @@ var _scameronde$experiment_elm_chat$ChatClient$update = F2(
 var _scameronde$experiment_elm_chat$ChatClient$main = _elm_lang$html$Html$program(
 	{init: _scameronde$experiment_elm_chat$ChatClient$init, update: _scameronde$experiment_elm_chat$ChatClient$update, view: _scameronde$experiment_elm_chat$ChatClient$view, subscriptions: _scameronde$experiment_elm_chat$ChatClient$subscriptions})();
 
+var _scameronde$experiment_elm_chat$DebugChatClient$øchatClientModel = A2(
+	_scameronde$experiment_elm_chat$Lens$lens,
+	function (_) {
+		return _.chatClientModel;
+	},
+	F2(
+		function (a, b) {
+			return _elm_lang$core$Native_Utils.update(
+				b,
+				{chatClientModel: a});
+		}));
 var _scameronde$experiment_elm_chat$DebugChatClient$Flags = function (a) {
 	return {debug: a};
 };
@@ -12270,11 +12397,7 @@ var _scameronde$experiment_elm_chat$DebugChatClient$update = F2(
 		var _p1 = _p0;
 		return A3(
 			_scameronde$experiment_elm_chat$Model$map,
-			function (ccm) {
-				return _elm_lang$core$Native_Utils.update(
-					model,
-					{chatClientModel: ccm});
-			},
+			A2(_scameronde$experiment_elm_chat$Lens$fset, _scameronde$experiment_elm_chat$DebugChatClient$øchatClientModel, model),
 			_scameronde$experiment_elm_chat$DebugChatClient$ChatClientMsg,
 			A2(_scameronde$experiment_elm_chat$ChatClient$update, _p1._0, model.chatClientModel));
 	});

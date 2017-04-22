@@ -4,6 +4,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
+import Lens exposing (..)
 import RestClient
 import WebSocket
 import WebSocketClient
@@ -47,19 +48,19 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         ChangeField NewMessage message ->
-            ( model |> messageLens.set message, Cmd.none )
+            (model |> set ømessage message) ! []
 
         SendMessage message ->
-            ( model |> messageLens.set "", WebSocketClient.sendMessage (Message message) )
+            (model |> set ømessage "") ! [ WebSocketClient.sendMessage (Message message) ]
 
         ReceivedMessage message ->
-            ( model |> messageLogLens.set (model.messageLog ++ message), Cmd.none )
+            (model |> set ømessageLog (model.messageLog ++ message)) ! []
 
         SetChatHistory (Ok messageLog) ->
-            ( model |> messageLogLens.set messageLog.messageLog, Cmd.none )
+            (model |> set ømessageLog messageLog.messageLog) ! []
 
         SetChatHistory (Err error) ->
-            ( model |> errorLens.set (toString error), Cmd.none )
+            (model |> set øerror (toString error)) ! []
 
 
 view : Model -> Html Msg

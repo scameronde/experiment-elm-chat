@@ -48,41 +48,41 @@ type alias Identifyable a =
     { a | id : Id }
 
 
-idLens : Lens { b | id : a } a
-idLens =
+øid : Lens { b | id : a } a
+øid =
     lens .id (\a b -> { b | id = a })
 
 
-nameLens : Lens { b | name : a } a
-nameLens =
+øname : Lens { b | name : a } a
+øname =
     lens .name (\a b -> { b | name = a })
 
 
-titleLens : Lens { b | title : a } a
-titleLens =
+øtitle : Lens { b | title : a } a
+øtitle =
     lens .title (\a b -> { b | title = a })
 
 
-participantLens : Lens { a | participant : b } b
-participantLens =
+øparticipant : Lens { a | participant : b } b
+øparticipant =
     lens .participant (\a b -> { b | participant = a })
 
 
-chatRoomLens : Lens { b | chatRoom : a } a
-chatRoomLens =
+øchatRoom : Lens { b | chatRoom : a } a
+øchatRoom =
     lens .chatRoom (\a b -> { b | chatRoom = a })
 
 
-messageLens : Lens { b | message : a } a
-messageLens =
+ømessage : Lens { b | message : a } a
+ømessage =
     lens .message (\a b -> { b | message = a })
 
 
-messageLogLens : Lens { b | messageLog : a } a
-messageLogLens =
+ømessageLog : Lens { b | messageLog : a } a
+ømessageLog =
     lens .messageLog (\a b -> { b | messageLog = a })
 
 
-errorLens : Lens { b | error : a } a
-errorLens =
+øerror : Lens { b | error : a } a
+øerror =
     lens .error (\a b -> { b | error = a })

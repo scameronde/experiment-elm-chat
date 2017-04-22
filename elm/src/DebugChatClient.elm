@@ -3,6 +3,7 @@ module DebugChatClient exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Model
+import Lens exposing (..)
 import ChatClient
 
 
@@ -30,7 +31,7 @@ init flags =
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update (ChatClientMsg msg) model =
-    Model.map (\ccm -> { model | chatClientModel = ccm }) ChatClientMsg (ChatClient.update msg model.chatClientModel)
+    Model.map (fset øchatClientModel model) ChatClientMsg (ChatClient.update msg model.chatClientModel)
 
 
 view : Model -> Html Msg
@@ -61,3 +62,8 @@ main =
         , view = view
         , subscriptions = subscriptions
         }
+
+
+øchatClientModel : Lens { b | chatClientModel : a } a
+øchatClientModel =
+    lens .chatClientModel (\a b -> { b | chatClientModel = a })

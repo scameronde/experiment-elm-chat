@@ -1,12 +1,13 @@
 module Login exposing (Msg(..), Field(..), Model, init, update, view, subscriptions)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
+import Html.Attributes as A exposing (..)
 import Html.Events exposing (..)
 import Http
 import BusinessTypes exposing (..)
 import RestClient
 import Cmd exposing (..)
+import Lens exposing (..)
 
 
 type Msg
@@ -19,7 +20,6 @@ type Msg
 type alias Model =
     { name : String
     , error : String
-    , json : String
     }
 
 
@@ -29,45 +29,45 @@ type Field
 
 init : ( Model, Cmd Msg )
 init =
-    ( { name = "", error = "", json = "" }
-    , Cmd.none
-    )
+    { name = "", error = "" } ! []
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         ChangeField Name name ->
-            ( model
-                |> nameLens.set name
-                |> errorLens.set (updatedErrorMessage name model.error)
-            , Cmd.none
+            (model
+                |> set øname name
+                |> set øerror (updatedErrorMessage name model.error)
             )
+                ! []
 
         GetParticipant ->
             if (String.isEmpty model.name) then
-                ( model, Cmd.none )
+                model ! []
             else
-                ( model, RestClient.getParticipant model.name GetParticipantResult )
+                model ! [ RestClient.getParticipant model.name GetParticipantResult ]
 
         GetParticipantResult (Ok participant) ->
-            ( model, toCmd (Login participant) )
+            model ! [ toCmd (Login participant) ]
 
         GetParticipantResult (Err error) ->
-            ( model |> errorLens.set (toString error), Cmd.none )
+            (model
+                |> set øerror (toString error)
+            )
+                ! []
 
         -- for external communication
         Login participant ->
-            ( model, Cmd.none )
+            model ! []
 
 
 updatedErrorMessage : String -> String -> String
 updatedErrorMessage name error =
-    (if String.isEmpty name then
+    if String.isEmpty name then
         ""
-     else
+    else
         error
-    )
 
 
 view : Model -> Html Msg
