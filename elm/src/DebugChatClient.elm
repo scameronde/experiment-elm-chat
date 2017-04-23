@@ -2,6 +2,9 @@ module DebugChatClient exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Bootstrap.Grid as Grid
+import Bootstrap.Grid.Col as Col
+import Bootstrap.Grid.Row as Row
 import Model
 import Lens exposing (..)
 import ChatClient
@@ -36,12 +39,22 @@ update (ChatClientMsg msg) model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ Html.map ChatClientMsg (ChatClient.view model.chatClientModel)
-        , if model.debug then
-            div [ class "debug" ] [ text <| toString model ]
-          else
-            div [] []
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ Html.map
+                    ChatClientMsg
+                    (ChatClient.view model.chatClientModel)
+                ]
+            ]
+        , Grid.row []
+            [ Grid.col []
+                [ if model.debug then
+                    div [ class "debug" ] [ text <| toString model ]
+                  else
+                    div [] []
+                ]
+            ]
         ]
 
 

@@ -3,6 +3,11 @@ module ChatRooms exposing (Msg(Selected, Deselected), Model, init, update, view,
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
+import Bootstrap.Grid as Grid
+import Bootstrap.Form as Form
+import Bootstrap.Form.Input as Input
+import Bootstrap.Table as Table
+import Bootstrap.Button as Button
 import Dialog
 import Http
 import BusinessTypes exposing (..)
@@ -256,50 +261,56 @@ viewChatRooms model =
 
 viewChatRoomList : List ChatRoom -> Maybe Id -> Html Msg
 viewChatRoomList chatRooms selection =
-    table [ class "table table-striped table-hover" ]
-        [ thead []
-            [ tr []
-                [ th [] [ text "Available Chat Rooms" ]
-                , th [] [ text "Actions" ]
+    Table.table
+        { options = [ Table.striped, Table.hover ]
+        , thead =
+            Table.thead []
+                [ Table.tr []
+                    [ Table.th [] [ text "Available Chat Rooms" ]
+                    , Table.th [] [ text "Actions" ]
+                    ]
                 ]
-            ]
-        , tbody []
-            (chatRooms
-                |> List.map
-                    (\chatRoom ->
-                        tr [ class (rowClass chatRoom selection) ]
-                            [ td [ onClick (SelectChatRoom chatRoom.id) ] [ text chatRoom.title ]
-                            , td []
-                                [ button
-                                    [ class "btn btn-danger btn-xs"
-                                    , onClick (DeleteChatRoom chatRoom.id)
+        , tbody =
+            Table.tbody []
+                (chatRooms
+                    |> List.map
+                        (\chatRoom ->
+                            Table.tr (rowClass chatRoom selection)
+                                [ Table.td [ Table.cellAttr (onClick (SelectChatRoom chatRoom.id)) ]
+                                    [ text chatRoom.title
                                     ]
-                                    [ text "X" ]
+                                , Table.td []
+                                    [ Button.button
+                                        [ Button.danger
+                                        , Button.small
+                                        , Button.onClick (DeleteChatRoom chatRoom.id)
+                                        ]
+                                        [ text "X" ]
+                                    ]
                                 ]
-                            ]
-                    )
-            )
-        ]
+                        )
+                )
+        }
 
 
-rowClass : ChatRoom -> Maybe Id -> String
+rowClass : ChatRoom -> Maybe Id -> List (Table.RowOption msg)
 rowClass chatRoom selection =
     if (selection == Just chatRoom.id) then
-        "info"
+        [ Table.rowInfo ]
     else
-        ""
+        []
 
 
 viewNewChatRoom : Model -> Html Msg
 viewNewChatRoom model =
-    Html.form [ onSubmit (PostChatRoom model) ]
-        [ div [ class "form-group" ]
-            [ label [ for "titleInput" ] [ text "New Chat Room" ]
-            , input [ id "titleInput", type_ "text", value model.newChatRoomTitle, class "form-control", onInput (ChangeField Title) ] []
+    Form.form [ onSubmit <| PostChatRoom model ]
+        [ Form.group []
+            [ Form.label [ for "titleInput" ] [ text "New Chat Room" ]
+            , Input.text [ Input.id "titleInput", Input.onInput <| ChangeField Title ]
             ]
-        , button
-            [ class "btn btn-primary"
-            , disabled ((model.newChatRoomTitle |> String.trim |> String.length) == 0)
+        , Button.button
+            [ Button.primary
+            , Button.disabled ((model.newChatRoomTitle |> String.trim |> String.length) == 0)
             ]
             [ text "Create" ]
         ]
@@ -324,12 +335,12 @@ dialogConfig model =
     , footer =
         Just
             (div []
-                [ button
-                    [ class "btn btn-danger"
-                    , onClick DeleteChatRoomAcknowledge
+                [ Button.button
+                    [ Button.danger
+                    , Button.onClick DeleteChatRoomAcknowledge
                     ]
                     [ text "OK" ]
-                , button [ class "btn", onClick DeleteChatRoomCancel ] [ text "Cancel" ]
+                , Button.button [ Button.onClick DeleteChatRoomCancel ] [ text "Cancel" ]
                 ]
             )
     }
@@ -337,11 +348,15 @@ dialogConfig model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ h2 [] [ text "Chat Room Selection" ]
-        , viewChatRooms model
-        , viewNewChatRoom model
-        , viewDialog model
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ h2 [] [ text "Chat Room Selection" ]
+                , viewChatRooms model
+                , viewNewChatRoom model
+                , viewDialog model
+                ]
+            ]
         ]
 
 

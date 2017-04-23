@@ -4,6 +4,10 @@ import Html exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events exposing (..)
 import Http
+import Bootstrap.Grid as Grid
+import Bootstrap.Form as Form
+import Bootstrap.Form.Input as Input
+import Bootstrap.Button as Button
 import BusinessTypes exposing (..)
 import RestClient
 import Cmd exposing (..)
@@ -72,14 +76,21 @@ updatedErrorMessage name error =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ viewErrorMsg model "Wrong Credentials!"
-        , Html.form [ onSubmit GetParticipant ]
-            [ div [ class "form-group" ]
-                [ label [ for "nameInput" ] [ text "Your name" ]
-                , input [ id "nameInput", type_ "text", class "form-control", onInput (ChangeField Name) ] []
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ viewErrorMsg model "Wrong Credentials!" ]
+            ]
+        , Grid.row []
+            [ Grid.col []
+                [ Form.form [ onSubmit GetParticipant ]
+                    [ Form.group []
+                        [ Form.label [ for "nameInput" ] [ text "Your name" ]
+                        , Input.text [ Input.id "nameInput", Input.onInput (ChangeField Name) ]
+                        ]
+                    , Button.button [ Button.primary, Button.disabled (noName model) ] [ text "OK" ]
+                    ]
                 ]
-            , button [ class "btn btn-primary", disabled (noName model) ] [ text "OK" ]
             ]
         ]
 

@@ -4,6 +4,11 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
+import Bootstrap.Grid as Grid
+import Bootstrap.Form as Form
+import Bootstrap.Form.Input as Input
+import Bootstrap.Form.Textarea as Textarea
+import Bootstrap.Button as Button
 import Lens exposing (..)
 import RestClient
 import WebSocket
@@ -65,20 +70,21 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div [ class "row" ]
-        [ h2 [] [ text model.chatRoom.title ]
-        , textarea [ class "col-md-12", rows 20, style [ ( "width", "100%" ) ], value model.messageLog ] []
-        , Html.form [ class "form-inline", onSubmit (SendMessage model.message) ]
-            [ input
-                [ type_ "text"
-                , class "form-control"
-                , size 30
-                , placeholder <| model.participant.name ++ ": Enter message"
-                , value model.message
-                , onInput (ChangeField NewMessage)
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ h2 [] [ text model.chatRoom.title ]
+                , Textarea.textarea [ Textarea.rows 20, Textarea.value model.messageLog ]
+                , Form.formInline [ onSubmit <| SendMessage model.message ]
+                    [ Input.text
+                        [ Input.placeholder <| model.participant.name ++ ": Enter message"
+                        , Input.value model.message
+                        , Input.onInput <| ChangeField NewMessage
+                        , Input.attrs <| [ size 30 ]
+                        ]
+                    , Button.button [ Button.primary ] [ text "Send" ]
+                    ]
                 ]
-                []
-            , button [ class "btn btn-primary" ] [ text "Send" ]
             ]
         ]
 

@@ -1,7 +1,7 @@
 module Chat exposing (Msg, Model, init, update, view, subscriptions)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
+import Bootstrap.Grid as Grid
 import Model
 import Lens exposing (..)
 import BusinessTypes exposing (..)
@@ -59,17 +59,19 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div [ class "row" ]
-        [ div [ class "col-md-6" ]
-            [ Html.map ChatRoomsMsg (ChatRooms.view model.chatRoomsModel)
-            ]
-        , div [ class "col-md-6" ]
-            [ case model.chatRoomModel of
-                Just model_ ->
-                    Html.map ChatRoomMsg (ChatRoom.view model_)
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ Html.map ChatRoomsMsg (ChatRooms.view model.chatRoomsModel)
+                ]
+            , Grid.col []
+                [ case model.chatRoomModel of
+                    Just model_ ->
+                        Html.map ChatRoomMsg (ChatRoom.view model_)
 
-                _ ->
-                    div [] []
+                    _ ->
+                        text ""
+                ]
             ]
         ]
 

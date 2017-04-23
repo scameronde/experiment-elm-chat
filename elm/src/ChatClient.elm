@@ -1,8 +1,7 @@
 module ChatClient exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
-import NavBar exposing (..)
+import Bootstrap.Grid as Grid
 import Model
 import Login
 import Chat
@@ -57,9 +56,17 @@ viewMainArea model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ viewNavBar model
-        , viewMain [ div [ class "view-area" ] [ viewMainArea model ] ]
+    Grid.containerFluid []
+        [ Grid.row []
+            [ Grid.col []
+                [ case model of
+                    LoginModel model_ ->
+                        Html.map LoginMsg (Login.view model_)
+
+                    ChatModel model_ ->
+                        Html.map ChatMsg (Chat.view model_)
+                ]
+            ]
         ]
 
 
